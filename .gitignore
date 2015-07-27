@@ -1,0 +1,5 @@
+data/clustering/.backup
+data/clustering/octave-workspace
+web/.git
+web/Procfile
+*.csv

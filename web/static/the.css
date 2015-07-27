@@ -1,0 +1,137 @@
+.sunburst {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0;
+  width: 100%;
+}
+
+.sunburst .sequence{
+  position: absolute;
+  z-index: -1;
+}
+
+.sunburst .sequence .trail g text {
+  font-weight: 600;
+  fill: #fff;
+}
+
+.sunburst .chart {
+  position: relative;
+}
+
+.sunburst .chart path {
+  stroke: #fff;
+  cursor: pointer;
+ -webkit-transition:opacity 0.5s;
+  transition:opacity 0.5s;
+}
+
+.sunburst .chart .explanation {
+  color: #666;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.sunburst .chart .data {
+  font-size: 2.5em;
+  display: block;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+}
+
+.sunburst .chart .percentage {
+  font-size: 1.5em;
+}
+
+.sunburst svg {
+  overflow: visible;
+  width: 100%;
+}
+
+.sunburst .modal {
+  background-color: #333;
+  cursor: pointer;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: .9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.sunburst .modal .quote {
+  background-color: #000;
+  color: #FFF;
+  cursor: text;
+  margin: 0 auto;
+  min-height: 100px;
+  overflow: hidden;
+  padding: 0px 0px 30px 0px;
+  position: relative;
+  top: 30%;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.sunburst .modal .quote .progress{
+  text-align: center;
+  font-size: 1.4em;
+  padding: 10px 0;
+}
+
+.sunburst .modal .quote .message{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.sunburst .modal .quote .arrow{
+  cursor: pointer;
+  display: inline-block;
+  height: 250px;
+  position: relative;
+  line-height: 50px;
+  padding: 10px 30px;
+  font-size: 3em;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select:none;
+ user-select:none;
+ -o-user-select:none;
+}
+.sunburst .modal .quote .left{
+  float: left;
+}
+.sunburst .modal .quote .right{
+  float: right;
+}
+
+@media (max-width: 600px) {
+  .sunburst .chart .data {
+    font-size: 1.7em;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .sunburst .chart .data {
+    font-size: 1.3em;
+  }
+  .sunburst .chart .percentage {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 300px) {
+  .sunburst .chart .data {
+    font-size: 1em;
+  }
+  .sunburst .chart .percentage {
+    font-size: 0.8em;
+  }
+}

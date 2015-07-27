@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sequences of {{name}} sunburst</title>
+    <script type="text/javascript" src="/static/d3.v3.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" type="text/css" href="/static/the.css" />
+    <style type="text/css">
+        html {
+            height:100%;
+        }
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- This guy right here -->
+    <div class="sunburst">
+        <div class="sequence">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="trail"></svg>
+        </div>
+        <div class="chart">
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <g class="g"></g>
+            </svg>
+
+            <div class="explanation">
+                <span class="data">{{name}}</span>
+                <span class="percentage"></span>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="quote">
+                <div class="progress"></div>
+                <div class="left arrow">
+                    &#60;
+                </div>
+                <div class="right arrow">
+                    &#62;
+                </div>
+                <div class="message">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/the.js"></script>
+    <script type="text/javascript">
+        // Hack to make this example display correctly in an iframe on bl.ocks.org
+        d3.select(self.frameElement).style("height", "700px");
+        new Sunburst({
+            el: document.querySelector('.sunburst'),
+            file: "/static/data/{{file}}.csv",
+            raw: "{{raw}}",
+            title: "{{name}}"
+        });
+    </script>
+
+</body>
+
+</html>
