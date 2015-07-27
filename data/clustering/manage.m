@@ -2,7 +2,7 @@
 
 more off;
 addpath ('helpers');
-addpath ('stucts');
+addpath ('structs');
 
 disp('* Managing');
 disp('Have previous data?');

@@ -2,10 +2,12 @@
 ## Under WTFPL
 
 clear
+addpath ('helpers');
+addpath ('structs');
+
 disp('**************************')
 disp('*    kMeans subdivider   *')
 disp('**************************')
-addpath ('helpers')
 
 csv = input('* Please input data file:','s');
 
