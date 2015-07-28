@@ -70,9 +70,9 @@ var Sunburst = function (sunburst){
 
   var mouseover = function(node){
     var p;
-    percentage.innerText = ((p = (100 * node.value / totalSize).toPrecision(3)) < 0.1) ? 
+    percentage.textContent = ((p = (100 * node.value / totalSize).toPrecision(3)) < 0.1) ? 
       "< 0.1%" : p + "%";
-    data.innerText = node.name;
+    data.textContent = node.name;
     updateBreadcrumbs(node.path);
     for (var i = list.length - 1; i >= 0; i--) {
       if(node.path.indexOf(list[i]) == -1){
@@ -91,10 +91,10 @@ var Sunburst = function (sunburst){
     modal.setAttribute("style","display:block");
     var req = new XMLHttpRequest();
     req.onload = function(){
-      message.innerText = JSON.parse(req.response).message;
-      progress.innerText = (index+1)+"/"+(active.indices.length);
+      message.textContent = JSON.parse(req.response).message;
+      progress.textContent = (index+1)+"/"+(active.indices.length);
     }
-    req.open("GET", "/api/" + raw + "/" + active.indices[index]);
+    req.open("GET", sunburst.url + "/api/" + raw + "/" + active.indices[index]);
     req.send();
   }
 
@@ -191,8 +191,8 @@ var Sunburst = function (sunburst){
   function clear(){
     if(activated) return;
     modal.setAttribute("style","");
-    percentage.innerText = "100%";
-    data.innerText = title;
+    percentage.textContent = "100%";
+    data.textContent = title;
     // Scrap it
     trail.innerHTML = null;
     for (var i = list.length - 1; i >= 0; i--) {
@@ -282,7 +282,7 @@ var Sunburst = function (sunburst){
   }
 
   // Kick it off.. Almost got rid of d3
-  d3.text(sunburst.file, function(text) {
+  d3.text(sunburst.url + sunburst.file, function(text) {
     build(d3.csv.parseRows(text));
     window.onresize = resize;
     resize();

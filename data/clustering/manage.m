@@ -10,12 +10,13 @@ disp('1. Nope. Restart');
 disp('2. Load');
 answer = prompt('What will it be?  ');
 if answer == 1
-	% Init from data in process
-	head = tree(K,costs,collective,counters,true);
-	root = head;
 
 	disp('** K default to Lower Bound');
 	K = LB;
+
+	% Init from data in process
+	head = tree(K,costs,collective,counters,true);
+	root = head;
 
 	% Set auto to blank
 	auto = Auto();

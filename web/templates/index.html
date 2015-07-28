@@ -53,10 +53,9 @@
 
     <script type="text/javascript" src="/static/the.js"></script>
     <script type="text/javascript">
-        // Hack to make this example display correctly in an iframe on bl.ocks.org
-        d3.select(self.frameElement).style("height", "700px");
         new Sunburst({
             el: document.querySelector('.sunburst'),
+            url:"http://sunbursted.herokuapp.com",
             file: "/static/data/{{file}}.csv",
             raw: "{{raw}}",
             title: "{{name}}"
