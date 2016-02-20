@@ -9,7 +9,7 @@ The fist CSV: `processed.csv` (or whatever you want to call it)
 Here's an example of what you want.
 
 | id | count | uniques | good | sentiment | subjectiveness |
-------------------------------------------------------------
+|----|-------|---------|------|-----------|----------------|
 | 0  | 23    |20       | 20   | 0.1       | 0.150000000000 |
 | 1  | 26    |24       | 24   | 0.0       | 0.775          |
 | 2  | 45    |41       | 39   | 0.1222222 | 0.370634920634 |
@@ -24,7 +24,7 @@ The second CSV: `quotes.csv` (or whatever you want to call it)
 Here's an example of what you want.
 
 | id | memo                                                                                                                                |
---------------------------------------------------------------------------------------------------------------------------------------------
+|----|-------------------------------------------------------------------------------------------------------------------------------------|
 | 0  | What really needs to go these days is people yelling at the identity of the politicians opposed to actually the arguments they make.|
 | 1  | I once thought that the US should mandate every kid in school gets a free puppy or kitten... nope not a great idea as I thought.    |
 | 2  | Honestly why don't traffic lights just have a gradient that changes over time.                                                      |
