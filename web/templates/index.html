@@ -53,9 +53,17 @@
 
     <script type="text/javascript" src="/static/the.js"></script>
     <script type="text/javascript">
+        function framed () {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+        var protocol = framed() ? "https" : "http";
         new Sunburst({
             el: document.querySelector('.sunburst'),
-            url:"https://sunbursted.herokuapp.com",
+            url: protocol + "://sunbursted.herokuapp.com",
             file: "/static/data/{{file}}.csv",
             raw: "{{raw}}",
             title: "{{name}}"
